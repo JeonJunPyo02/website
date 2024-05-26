@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='viewport' content='width=device-width, intial-scale=1.0'>
+
+	<link rel="stylesheet" href="/css/account.css">
+	<title>회원가입</title>
+
+</head>
+<body>
+	<div class="account-form">
+	<h2>Sign Up</h2>
+
+	<form action="signup.php" method="post">
+        <p><input type="text" name="name" placeholder="이름" required class="text-field"></p>
+		<p><input type="text" name="userid" placeholder="아이디" required class="text-field"></p>
+		<p><input type="password" name="userpw" placeholder="비밀번호" required class="text-field"></p>
+		<p><input type="password" name="pwcheck" placeholder="비밀번호 확인" required class="text-field"></p>
+        <p><input type="text" name="email" placeholder="이메일"  class="text-field"></p>
+		<p><input type="submit" value="회원가입" class="submit-btn"></p>
+	</form>
+	</div>
+</body>
+</html>
