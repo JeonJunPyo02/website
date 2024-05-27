@@ -21,7 +21,7 @@ require_once("function/session.php");
 
 	<h3>게시글 작성</h3>
 
-    <form action="writeup.php" method="post">
+    <form action="writeup.php" method="post" enctype="multipart/form-data">
         <label for="author">작성자 : <?php echo $name?></label> 
 		<input type="hidden" name="name" value=<?php echo $name?>><br><br>
         
@@ -30,9 +30,13 @@ require_once("function/session.php");
         
         <label for="content">내용 :</label><br>
         <textarea class="content" name="content" rows="15" required></textarea><br><br>
-        
+
+        <label for="file">파일 업로드 : </label>
+        <input type="file" name="file">
+        <!--accept=""-->
+
         <div class="write_btn">
-        <input type="submit" value="글쓰기">
+        <input type="submit" value="글쓰기" multiple>
         <div>
     </form>
 

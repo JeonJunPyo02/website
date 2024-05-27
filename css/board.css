@@ -31,6 +31,17 @@ td {
     padding-right: 10px;
 }
 
+.pdfBtn{
+    text-align: right;
+    background-color: rgb(151, 119, 220);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #ffffff;
+}
+
 .search_box{
     padding: 10px;
     text-align: right;
@@ -43,7 +54,6 @@ td {
     padding-left: 20px;
     margin-bottom: 10px;
     word-wrap: break-word;
-    white-space: pre-wrap;
 }
 
 .buttons{

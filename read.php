@@ -20,6 +20,7 @@ $hit = mysqli_query($conn, "update post set hit=$hit where idx=$idx");
 $title = $res['title'];
 $content = $res['content'];
 $content = nl2br($content);
+$file_path = $res['file'];
 
 // 수정, 삭제 시 작성자 검증을 위한
 $writer = $res["writer"];
@@ -49,6 +50,15 @@ $writer = $res["writer"];
             echo "내용 : <br>";
             // $content = wordwrap($content, 85, "\n", true);
             echo $content;
+
+            if(!empty($file_path)){
+                $file_extension = strtolower(pathinfo($file_path, PATHINFO_EXTENSION));
+                if($file_extension == "pdf"){
+                    echo "<p><a href='$file_path' class='pdfBtn' download='다운로드'>PDF 다운로드</a></p>";
+                } else {
+                    echo "<br><img src='$file_path' alt='이미지' style='max-width: 100%; height: auto;'>";
+                }
+            }
             ?>
         </div>
 
